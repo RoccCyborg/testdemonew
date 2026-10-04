@@ -313,7 +313,7 @@ function downloadJSON(){
  const blob=new Blob([JSON.stringify({candidate:document.getElementById('candidateName').value,report:text},null,2)],{type:'application/json'});
  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Vishal_Assessment_Report.json';a.click();
 }
-document.addEventListener("input",updateProgress); document.addEventListener("change",updateProgress); updateProgress();
+document.addEventListener("input",updateProgress); document.addEventListener("change",updateProgress); init(); updateProgress();
 </script>
 </body>
 </html>
