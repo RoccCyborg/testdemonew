@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Office / Admin Skills Assessment — Test 02</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1 id="testTitle">Office / Admin Skills Assessment — Test 02</h1>
+<div id="testMeta" class="meta">50 Conceptual MCQs + 20 One-Word Questions · Office Administration, Documentation, Data Entry, MIS & Workflow</div>
+</header>
+
+<section id="intro" class="card">
+<h2>Candidate Instructions</h2>
+<ul>
+<li>Attempt all 70 questions independently.</li>
+<li>Choose the answer that best demonstrates understanding.</li>
+<li>For one-word questions, type the shortest correct term.</li>
+<li>Do not use Google, notes, another person, or AI if this assessment is being used diagnostically.</li>
+<li>The result is a diagnostic profile, not a formal academic qualification.</li>
+</ul>
+<label>Candidate name<br><input id="candidateName" type="text" value="" placeholder="Enter candidate name"></label><br><br>
+<label>Assessment date<br><input id="assessmentDate" type="text" placeholder="Assessment date"></label>
+</section>
+
+<section id="assessment">
+<div class="card">
+<div><b>Progress</b> <span id="progressText" class="small"></span></div>
+<div class="progress"><div id="progressBar"></div></div>
+</div>
+<div id="questions"></div>
+<div class="actions no-print">
+<button onclick="submitAssessment()">Submit Assessment &amp; Generate Report</button>
+<button class="secondary" onclick="saveDraft()">Save Progress</button>
+<button class="secondary" onclick="loadDraft()">Load Saved Progress</button>
+<button class="danger" onclick="resetAssessment()">Reset</button>
+</div>
+</section>
+
+<section id="report" class="hidden"></section>
+</div>
+<script src="office-admin-data.js" defer></script>
+<script src="assessment-engine.js" defer></script>
+</body>
+</html>
